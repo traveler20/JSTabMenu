@@ -1,1 +1,1 @@
-# js-tab
+JavaScriptによるタブメニュー

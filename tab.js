@@ -2,12 +2,15 @@
 
   const $doc = document;
   const $tab = $doc.getElementById('js-tab');
+  //tab-nav-itemを変数に
   const $nav = $tab.querySelectorAll('[data-nav]');
+  //tab-contents-itemを変数に
   const $content = $tab.querySelectorAll('[data-content]');
   const ACTIVE_CLASS = 'is-active';
   const navLen = $nav.length;
-  
+
   //初期化
+  //display:noneで消しているtab-content[0]を表示
   const init = () => {
     $content[0].style.display = 'block';
   };
@@ -37,7 +40,7 @@
   //全nav要素に対して関数を適応・発火
   let index = 0;
   while(index < navLen){
-    $nav[index].addEventListener('click', (e) => handleClick(e));  
+    $nav[index].addEventListener('click', (e) => handleClick(e));
     index++;
   }
 
